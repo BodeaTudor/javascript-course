@@ -1,0 +1,5 @@
+JavaScript can be added anywhere between the head tags or anywhere between the body tags.
+Placing a script inside the head is not recommended because it can cause loading issues. It is recommended to place the
+script just before the body closing tag.
+However, the best practice is to externelize i.e. create a separate js file, and link the file from the HTML file.
+The code in JavaScript is executed from top to bottom.
