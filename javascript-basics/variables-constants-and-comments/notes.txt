@@ -1,0 +1,4 @@
+The original way of creating a variable the keyword 'var' was being used.
+The 'let' keyword creates a variable that can have its value changed at a later time.
+The 'const' keyword does not allow the variable value to change.
+Variables can only contain letters, numbers, underscores or dollar signs, but they cannot start with a number.
