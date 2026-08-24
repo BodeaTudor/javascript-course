@@ -1,0 +1,8 @@
+There are 7 data types in js:
+- number
+- string
+- boolean
+- null      - used to explicitly set a variable with no value
+- undefined - it is given automatically by the browser that have not yet been defined
+- object    - complex data structures (Arrays, Dates, Literals etc.)
+- symbol    - used with objects
