@@ -6,3 +6,10 @@ There are 7 data types in js:
 - undefined - it is given automatically by the browser that have not yet been defined
 - object    - complex data structures (Arrays, Dates, Literals etc.)
 - symbol    - used with objects
+
+Comparison:
+Using the equal operator == is called abstract equality or loose equality. Meaning that a value's type is not considered
+when the comparison is performed. Behind the scenes JavaScript is using type conversion, meaning that a string value
+can result in being equal to a numeric value because the string value is converted to a number.
+
+For strict comparison three equal signs are used '==='. Strict comparison is comparing both the value and the type.
