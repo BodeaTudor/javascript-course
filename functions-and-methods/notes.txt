@@ -1,0 +1,33 @@
+FUNCTION DECLARATIONS AND FUNCTION EXPRESSIONS:
+
+Function declaration and function expression behave almost in the same way.
+The difference is in hoisting.
+
+Function declarations are hoisted, so they can be called before they are defined.
+
+Function expressions are not available before the line where they are assigned.
+
+Example:
+
+sayHello();
+
+function sayHello() {
+    console.log("Hello");
+}
+
+This works.
+
+
+sayBye();
+
+const sayBye = function() {
+    console.log("Bye");
+};
+
+This does NOT work.
+
+HOISTING:
+
+Hoisting means that JavaScript knows about certain declarations before it reaches their line in the code.
+Function declarations are hoisted and can be called before they are written.
+Function expressions assigned to const or let cannot be used before their declaration.
