@@ -13,3 +13,12 @@ when the comparison is performed. Behind the scenes JavaScript is using type con
 can result in being equal to a numeric value because the string value is converted to a number.
 
 For strict comparison three equal signs are used '==='. Strict comparison is comparing both the value and the type.
+
+Type Conversion:
+When converting types to boolean, some value are considered true and others false. A common term for these value is
+'truthy' or 'falsy'.
+Positive numbers are considered truthy values as well ass negative numbers, but 0 is false.
+Strings of any length are truthy but empty strings are falsy.
+
+Implicit type conversion is performed behind the scene by JavaScript, and explicit type conversion is written explicitly
+by the developer.
