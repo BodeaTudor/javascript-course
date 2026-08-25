@@ -43,3 +43,39 @@ FUNCTIONS VS METHODS:
 Methods are functions as well.
 The difference between functions and methods is that a function are simply called by its name i.e. function_name()
 and a method is called on an object or a data type for example string.toUpperCase().
+
+CALLBACK FUNCTIONS:
+A callback is a function passed as an argument to another function.
+
+The receiving function can then execute the callback when it wants.
+
+Example:
+
+const greetUser = (name, callback) => {
+    console.log("Hello " + name);
+    callback();
+};
+
+const sayBye = () => {
+    console.log("Bye!");
+};
+
+greetUser("Mario", sayBye);
+
+Here:
+- sayBye is passed as an argument
+- callback now refers to sayBye
+- callback() executes sayBye()
+
+IMPORTANT:
+Pass the function:
+sayBye
+
+Do not execute it immediately:
+sayBye()
+
+FOREACH METHOD:
+The forEach method expects a callback function as an argument.
+The first parameter of the callback function is the value of the current element in the array.
+The second OPTIONAL parameter is the index of the current element.
+A callback function can also be defined somewhere else and passed into the forEach method.
