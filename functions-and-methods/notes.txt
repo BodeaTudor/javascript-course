@@ -31,3 +31,10 @@ HOISTING:
 Hoisting means that JavaScript knows about certain declarations before it reaches their line in the code.
 Function declarations are hoisted and can be called before they are written.
 Function expressions assigned to const or let cannot be used before their declaration.
+
+ARROW FUNCTIONS:
+Arrow functions don't use the function keyword.
+When the arrow function only has one parameter the parenthesis are optional.
+When there are no parameters the parenthesis are mandatory.
+When the code block only has the return statement the function can be simplified by removing the curly braces and the
+return keyword.
