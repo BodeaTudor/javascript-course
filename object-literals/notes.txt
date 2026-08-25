@@ -1,0 +1,86 @@
+CREATING AN OBJECT LITERAL:
+To create an object the following syntax is used:
+let variable_name = {};
+The properties of an object are a set of key-value pairs (property_name: property_value).
+
+'THIS' KEYWORD:
+The 'this' keyword refers to the context in which the current code is being executed.
+Its value can be different depending on where and how it is used.
+In a browser, when used in the global context, 'this' usually refers to the window object.
+When used inside a regular object method, 'this' usually refers to the object that called the method.
+
+!!! IMPORTANT !!!
+Arrow functions do NOT create their own 'this'.
+Instead, they inherit 'this' from the surrounding context where they were defined.
+Because of this, arrow functions are usually not a good choice for object methods when you want 'this' to refer to that object.
+
+Example:
+const user = {
+    name: "Mario",
+
+    regularFunction: function () {
+        console.log(this.name);
+    },
+
+    arrowFunction: () => {
+        console.log(this.name);
+    }
+};
+
+user.regularFunction();
+→ 'this' refers to user
+
+user.arrowFunction();
+→ 'this' does NOT refer to user
+
+PRIMITIVE AND REFERENCE TYPES:
+Primitive Types: numbers, strings, booleans, null, undefined, symbols
+Reference Types: all types of objects (object literals, arrays, functions, dates etc.)
+
+Primitive types are stored on the stack.
+
+The stack is a fast area of memory used for storing small and simple values.
+The space available on the stack is limited.
+
+Reference types are stored on the heap.
+The heap is a larger area of memory used for storing more complex data, such as objects and arrays.
+The heap has more space available, but accessing data from it is generally a bit slower.
+
+For reference types, the variable itself stores a reference to the location of the value in the heap.
+
+Stack example:
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+
+scoreOne stores the primitive value 50.
+When scoreTwo is assigned scoreOne, the value is copied.
+This means scoreOne and scoreTwo store two independent primitive values.
+
+Even though both values are initially 50, changing one does not affect the other.
+scoreOne = 100;
+
+Now:
+scoreOne = 100
+scoreTwo = 50
+
+Heap example:
+
+const userOne = { name: 'mario', score: 100 };
+const userTwo = userOne;
+
+The object itself is stored in memory, and the variables hold a reference to that object.
+When userTwo is assigned userOne, the object is NOT copied.
+Instead, the reference is copied.
+This means both variables refer to the same object.
+
+userOne.name = 'mario2';
+userOne.score = 50;
+
+Now both:
+userOne
+userTwo
+
+refer to:
+{ name: 'mario2', score: 50 }
+
+Changing the object through one variable is visible through the other variable because both refer to the same object.
