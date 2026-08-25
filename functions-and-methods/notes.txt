@@ -1,0 +1,81 @@
+FUNCTION DECLARATIONS AND FUNCTION EXPRESSIONS:
+
+Function declaration and function expression behave almost in the same way.
+The difference is in hoisting.
+
+Function declarations are hoisted, so they can be called before they are defined.
+
+Function expressions are not available before the line where they are assigned.
+
+Example:
+
+sayHello();
+
+function sayHello() {
+    console.log("Hello");
+}
+
+This works.
+
+
+sayBye();
+
+const sayBye = function() {
+    console.log("Bye");
+};
+
+This does NOT work.
+
+HOISTING:
+
+Hoisting means that JavaScript knows about certain declarations before it reaches their line in the code.
+Function declarations are hoisted and can be called before they are written.
+Function expressions assigned to const or let cannot be used before their declaration.
+
+ARROW FUNCTIONS:
+Arrow functions don't use the function keyword.
+When the arrow function only has one parameter the parenthesis are optional.
+When there are no parameters the parenthesis are mandatory.
+When the code block only has the return statement the function can be simplified by removing the curly braces and the
+return keyword.
+
+FUNCTIONS VS METHODS:
+Methods are functions as well.
+The difference between functions and methods is that a function are simply called by its name i.e. function_name()
+and a method is called on an object or a data type for example string.toUpperCase().
+
+CALLBACK FUNCTIONS:
+A callback is a function passed as an argument to another function.
+
+The receiving function can then execute the callback when it wants.
+
+Example:
+
+const greetUser = (name, callback) => {
+    console.log("Hello " + name);
+    callback();
+};
+
+const sayBye = () => {
+    console.log("Bye!");
+};
+
+greetUser("Mario", sayBye);
+
+Here:
+- sayBye is passed as an argument
+- callback now refers to sayBye
+- callback() executes sayBye()
+
+IMPORTANT:
+Pass the function:
+sayBye
+
+Do not execute it immediately:
+sayBye()
+
+FOREACH METHOD:
+The forEach method expects a callback function as an argument.
+The first parameter of the callback function is the value of the current element in the array.
+The second OPTIONAL parameter is the index of the current element.
+A callback function can also be defined somewhere else and passed into the forEach method.
