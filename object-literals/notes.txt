@@ -1,0 +1,4 @@
+CREATING AN OBJECT LITERAL:
+To create an object the following syntax is used:
+let variable_name = {};
+The properties of an object are a set of key-value pairs (property_name: property_value).
