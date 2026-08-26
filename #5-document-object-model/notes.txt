@@ -1,0 +1,17 @@
+The DOM is something created by the browser when an HTML document loads inside it.
+Once the HTML document is loaded in the browser, the browser creates an object which models the document called the 'document'
+object.
+The 'document' object contains many different properties about the HTML document and many different methods used to interact
+with the HTML document.
+The DOM also describes how a document looks in a visual way too.
+The DOM describes the HTML page as a hierarchical tree of nodes.
+For example:
+        HTML (root node)
+          |        |
+        head     body
+          |        |  |   |
+        title     h1 div div
+                     | |
+                     p p
+
+The HTML is the root node. The head, body, div are element nodes and the title, h1, p are text nodes.
